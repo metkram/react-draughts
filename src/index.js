@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Game from "./Game"
 
 ReactDOM.render(
   <React.StrictMode>
-    <div>This is going to be a Draughts application on React Js</div>
+    <Game />
   </React.StrictMode>,
   document.getElementById('root')
 );
