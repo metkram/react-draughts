@@ -1,1 +1,20 @@
+.board {
+  width: 176px;
+  height: 176px;
+  border: 5px solid #a0a0a0;
+}
 
+.square-w {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  float: left;
+}
+
+.square-b {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  float: left;
+  background-color: #000;
+}

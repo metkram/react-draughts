@@ -6,7 +6,7 @@ class Square extends React.Component {
   }
   render() {
     return (
-      <div>at least one square object</div>
+      <div className={this.props.color == "w" ? "square-w" : "square-b"}></div>
     );
   };
 }
