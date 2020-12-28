@@ -10,19 +10,10 @@ class Board extends React.Component {
     let squares = [];
     for (let i = 0; i < 8; i++) {
       for (let u = 0; u < 8; u++) {
-        if (i % 2 == 0) {
-          if (u % 2 == 0) {
-            squares.push(<Square number={i * 8 + u} color={"w"} status={this.props.gameMatrix[i * 8 + u] ? this.props.gameMatrix[i * 8 + u] : null} />);
-          } else {
-            squares.push(<Square number={i * 8 + u} color={"b"} status={this.props.gameMatrix[i * 8 + u] ? this.props.gameMatrix[i * 8 + u] : null} />);
-          }
-        } else {
-          if (u % 2 != 0) {
-            squares.push(<Square number={i * 8 + u} color={"w"} status={this.props.gameMatrix[i * 8 + u] ? this.props.gameMatrix[i * 8 + u] : null} />);
-          } else {
-            squares.push(<Square number={i * 8 + u} color={"b"} status={this.props.gameMatrix[i * 8 + u] ? this.props.gameMatrix[i * 8 + u] : null} />);
-          }
-        }
+        let sts = this.props.gameMatrix[i * 8 + u] ? this.props.gameMatrix[i * 8 + u] : null;
+        let nbr = i * 8 + u;
+        let clr = (u % 2 == 0) ? (i % 2 == 0) ? "w" : "b" : (i % 2 != 0) ? "w" : "b";
+        squares.push(<Square number={nbr} status={sts} color={clr} />);
       }
     }
     return squares;
